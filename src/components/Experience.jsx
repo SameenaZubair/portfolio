@@ -50,13 +50,13 @@ const Experience = () => {
     {
       id: 7,
       src: bootstrap,
-      title: 'BOOTSTRAP',
+      title: 'REDUX TOOLKIT',
       style: 'shadow-purple-600',
     },
     {
       id: 8,
       src: redux,
-      title: 'REDUX TOOLKIT',
+      title: 'BOOTSTRAP',
       style: 'shadow-pink-500',
     },
     {

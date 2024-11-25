@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
+
 const Footer = () => {
   const links = [
     {
@@ -32,7 +33,16 @@ const Footer = () => {
       ),
       href: 'mailto:sameenazubair567@gmail.com',
     },
- 
+    {
+      id: 4,
+      child: (
+          <>
+          <BsFillPersonLinesFill size={30}/>
+          </>
+      ),
+      href: 'https://drive.google.com/file/d/1a4SkVyBWdLv57A-ewhIdyNqeLuZcWSY8/view?usp=drivesdk'
+   
+   },
   ];
 
   return (
