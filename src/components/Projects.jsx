@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import fruit from '../assets/fruit-store.png';
 import travel from '../assets/travel.png';
+import portfolio from '../assets/portfolio.png';
+import brand from '../assets/brand.png';
 
 const Projects = () => {
   // State to manage visibility of descriptions
-  const [showDescription, setShowDescription] = useState({ travel: false, fruit: false });
+  const [showDescription, setShowDescription] = useState({ travel: false, fruit: false, portfolio: false, brand: false });
 
   // Function to handle button clicks for demo
   const openDemo = (url) => {
@@ -91,6 +93,73 @@ const Projects = () => {
             </p>
           )}
         </div>
+        {/*  Portfolio Project */}
+        <div className="flex flex-col items-center mt-8">
+          <img
+            src={portfolio}
+            alt="My Portfolio Website"
+            className="w-40 sm:w-60 md:w-72 h-auto shadow-lg rounded-md hover:scale-105 duration-500 shadow-pink-500"
+          />
+          <div className="mt-5 flex space-x-4">
+            <button
+              className="px-4 py-2 bg-gradient-to-r  from-pink-500 to-pink-100 text-black rounded hover:scale-105 duration-500"
+              onClick={() => openDemo('https://sameenazubair.github.io/portfolio/')}
+            >
+              Demo
+            </button>
+            <button
+              className="px-4 py-2 bg-gradient-to-r from-gray-400 to-white text-black rounded hover:scale-105 
+              duration-500"
+              onClick={() => toggleDescription('portfolio')}
+            >
+              {showDescription.portfolio ? 'Hide Description' : 'Description'}
+            </button>
+          </div>
+          {showDescription.portfolio && (
+            <p className="mt-4 text-center text-black bg-gradient-to-b from-gray-200 to-pink-300 p-4 rounded-md shadow-lg max-w-lg mx-auto">
+              <strong>My Portfolio Website</strong>: A personal portfolio website to showcase my projects and skills. 
+              Designed and developed the website using React for a dynamic and interactive user experience.
+              Utilized Tailwind CSS to create a responsive and visually appealing layout
+            </p>
+          )}
+        </div>
+
+
+        {/*  Brand Manager */}
+        <div className="flex flex-col items-center mt-8">
+          <img
+            src={brand}
+            alt="Brand Manager"
+            className="w-40 sm:w-60 md:w-72 h-auto shadow-lg rounded-md hover:scale-105 duration-500 shadow-gray-500"
+          />
+          <div className="mt-5 flex space-x-4">
+            <button
+              className="px-4 py-2 bg-gradient-to-r  from-pink-500 to-pink-100 text-black rounded hover:scale-105 duration-500"
+              onClick={() => openDemo('https://crud-git-main-sameena-zubairs-projects.vercel.app/')}
+            >
+              Demo
+            </button>
+            <button
+              className="px-4 py-2 bg-gradient-to-r from-purple-400 to-white text-black rounded hover:scale-105 
+              duration-500"
+              onClick={() => toggleDescription('brand')}
+            >
+              {showDescription.brand ? 'Hide Description' : 'Description'}
+            </button>
+          </div>
+          {showDescription.brand && (
+            <p className="mt-4 text-center text-black bg-gradient-to-b from-gray-200 to-purple-400 p-4 rounded-md shadow-lg max-w-lg mx-auto">
+              <strong>Brands And Products Manager</strong>:This web application is designed to allow users to manage 
+              brands and products efficiently. The platform provides functionality for creating, updating, deleting, 
+              and viewing detailed information about brands and their associated products; offers a 
+              user-friendly interface, responsive design, and a seamless user experience.  
+              This project was developed using React.js, TailwindCSS, and Firebase. It is deployed on Vercel to ensure 
+              easy access and robust performance
+            </p>
+          
+          )}
+        </div>
+        <br/>
       </div>
     </div>
   );

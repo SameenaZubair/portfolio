@@ -7,7 +7,9 @@ import tailwind from '../assets/tailwind.png';
 import github from '../assets/github.png';
 import bootstrap from '../assets/bootstrap.png';
 import redux from '../assets/redux.png';
+import firebase from '../assets/firebase.png'
 import framer from '../assets/framer.png';
+
 
 const Experience = () => {
   const techs = [
@@ -64,6 +66,12 @@ const Experience = () => {
       src: framer,
       title: 'FRAMER MOTION',
       style: 'shadow-blue-500',
+    },
+    {
+      id: 10,
+      src: firebase,
+      title: 'FIREBASE',
+      style: 'shadow-orange-500'
     },
   ];
 
